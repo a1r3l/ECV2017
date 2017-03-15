@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="public/imgs/spray.png">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+	<title>Graffity</title>
+</head>
+<body>
+	<!-- HEADER -->
+	<header>
+		<p class="menuButon">&#9776;</p>
+		<img src="public/imgs/spray.png" alt="logo">
+		<p>Graffity</p>
+		<div class="login_register">
+			<div class="registerButton"><p>Register</p></div>
+			<div class="loginButton"><p>Login</p></div>
+			<div class="nickname"><p></p></div>
+			<div class="logoutButton"><p>Logout</p></div>
+		</div>
+	</header>
+	<!-- MENU -->
+	<div class="menu">
+		<div class="menuTab" name="chat">
+			<p class="title">Chat</p>
+			<p class="status material-icons">visibility_off</p>
+		</div>
+		<div class="menuTab" name="editioncanvas">
+			<p class="title">Edition Mode</p>
+			<p class="status material-icons">visibility</p>
+		</div>
+		<div class="menuTab no-click">
+			<p class="title">Online Users</p>
+		</div>
+		<div class="usersContainer">
+			<ul class="users"></ul>
+		</div>
+	</div>
+	<!-- CHAT -->
+	<div class="chat">
+		<div class="messages"></div>
+		<input type="text" name="chat_input" placeholder="Write your message...">
+	</div>
+	<!-- LOGIN -->
+	<div class="login">
+		<div class="login_inputs">
+			<input type="text" placeholder="Username" name="login_user">
+			<input type="password" placeholder="Password" name="login_pass">
+			<div class="check"><input type="checkbox" name="save"> Remember me</div>
+			<div class="button_login">Submit</div>
+			<div class="submit_loader">
+				<img src="public/imgs/load.gif" alt="load">
+			</div>
+		</div>
+	</div>
+	<!-- REGISTER -->
+	<div class="register">
+		<div class="register_inputs">
+			<input type="text" placeholder="Username" name="reg_user">
+			<input type="password" placeholder="Password" name="reg_pass">
+			<input type="password" placeholder="Repeat Password" name="rreg_pass">
+			<div class="button_register">Submit</div>
+		</div>
+	</div>
+
+	<!-- CANVAS -->
+	<div class="canvasContainer"></div>
+	
+	<!-- CANVAS 2D ON ES PINTA PER PLASMAR A 3D -->
+	<div class= "editor">
+		<div class="canvasEditor" id="editCanvas"></div>
+	</div>
+
+
+	<!-- CONTROLS -->
+	<div class="editioncanvas">
+		<div class="linecont">
+			<input id="range" type="range" min="1" max="10" step="1" value="5">
+		</div>
+		<div class="zoom">
+			<div class="zoombut zoomin">
+				<i class="material-icons">zoom_in</i>
+			</div>
+			<div class="zoombut zoomout">
+				<i class="material-icons">zoom_out</i>
+			</div>
+		</div>
+		<div class="colors">
+			<div class="color red" name="#F44336"></div>
+			<div class="color green" name="#4CAF50"></div>
+			<div class="color blue" name="#2196F3"></div>
+			<div class="color yellow" name="#FFEB3B"></div>
+			<div class="color black" name="#000000"></div>
+			<div class="color white" name="#FFFFFF"></div>
+		</div>
+		<div class="controls">
+			<div class="lcont"><div class="line"></div></div>
+			<div class="arrow up">
+				<i class="material-icons">keyboard_arrow_up</i>
+			</div>
+			<div class="arrow down">
+				<i class="material-icons">keyboard_arrow_down</i>
+			</div>
+			<div class="arrow right">
+				<i class="material-icons">keyboard_arrow_right</i>
+			</div>
+			<div class="arrow left">
+				<i class="material-icons">keyboard_arrow_left</i>
+			</div>
+		</div>
+	</div>
+	<!-- GUIA -->
+	<div class="guia">
+		<div class="guia-petit">
+			<img src="public/imgs/guia.png" alt="guia">
+			<div class="closeGuia">Close</div>
+		</div>
+	</div>
+
+	<!-- ERRORS -->
+	<div class="errors">
+		<div class="center">
+			<img src="public/imgs/oops.png" alt="oops">
+			<p>CAN'T CONNECT TO THE SERVER, PLEASE TRY IT LATER...<p>
+		</div>
+	</div>
+	<div class="errors-petits-container">
+		<div class="error-petit">
+			<p id="error"></p>
+			<div class="closeError">Close</div>
+		</div>
+	</div>
+		<!-- SCRIPTS -->
+		<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-auth.js"></script>
+		<script src="js/DB.js"></script>
+		<script src="js/login.js"></script>
+		<script src="js/register.js"></script>
+		<script src="js/keyEvent.js"></script>
+		<script src="js/chat.js"></script>
+		<script src="js/message.js"></script>
+		<script src="js/menu.js"></script>
+		<script src="js/onlineUsers.js"></script>
+		<script src="js/local.js"></script>
+		<script src="js/three.js"></script>
+		<script src="js/Fog.js"></script>
+		<script src="js/Color.js"></script>
+		<script src="js/errors.js"></script>
+		<script src="js/Math.js"></script>
+		<script src="js/OBJLoader.js"></script>
+		<script src="js/MTLLoader.js"></script>
+		<script src="js/editor.js"></script>
+		<script src="js/wall.js"></script>
+		<script src="js/canvas.js"></script>
+		<script src="js/edition.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/connect.js"></script>
+	</body>
+	</html>
