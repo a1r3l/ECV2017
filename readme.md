@@ -1,5 +1,5 @@
 # Pràctica Final - Graffity
-##### Aurel Ioan i Marc Garcia / 18689 - 158637
+##### Aurel Ioan @aurelioan i Marc Garcia @mgm793/ 18689 - 158637
 
 ## Que tenim?
 ### Backend
